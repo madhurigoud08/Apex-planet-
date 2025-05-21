@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Practice Webpage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Basic CSS for layout and form */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, nav {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 10px;
+      padding: 20px;
+    }
+    .form-container, .todo-container {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    form input, form textarea, form button {
+      width: 100%;
+      margin: 8px 0;
+      padding: 8px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    ul li {
+      background: #e3e3e3;
+      margin: 5px 0;
+      padding: 8px;
+      border-radius: 4px;
+    }
+    @media (max-width: 600px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Practice Webpage</h1>
+  </header>
+
+  <nav>
+    <p>Home | Contact | To-Do List</p>
+  </nav>
+
+  <div class="container">
+    <!-- Contact Form Section -->
+    <div class="form-container">
+      <h2>Contact Form</h2>
+      <form id="contactForm">
+        <label>Name:</label>
+        <input type="text" id="name" required>
+
+        <label>Email:</label>
+        <input type="email" id="email" required>
+
+        <label>Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <!-- To-Do List Section -->
+    <div class="todo-container">
+      <h2>To-Do List</h2>
+      <input type="text" id="taskInput" placeholder="Enter a task">
+      <button id="addBtn">Add Task</button>
+      <ul id="taskList"></ul>
+    </div>
+  </div>
+
+</body>
+</html>
